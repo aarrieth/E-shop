@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/styles.scss';
 
 const App = () => {
 	return (
 		<div>
-			<p>Hola mundo!</p>
+			<h1>Hola mundo, esto es una prueba!</h1>
 		</div>
 	);
 };
