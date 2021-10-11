@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/Layout.scss';
 import '../styles/Logo.scss';
 import Form from '../containers/Form';
-import FormContainer from '../containers/FormContainer';
 import Layout from '../containers/Layout';
 import TextForm from '../containers/TextForm';
 import Label from '../components/Label';
@@ -14,7 +13,7 @@ import Logo from '../components/Logo';
 const NewPassword = () => {
 	return (
 		<Layout className="layout-size layout-display">
-			<FormContainer>
+			<Layout className="layout-form--container">
 				<Logo
 					urlLogo={urlLogo}
 					alt="logo"
@@ -61,7 +60,7 @@ const NewPassword = () => {
 						className="primary-button primary-button--succes"
 					/>
 				</Form>
-			</FormContainer>
+			</Layout>
 		</Layout>
 	);
 };
