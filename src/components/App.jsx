@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../containers/Layout';
-import NewPassword from '../containers/NewPassword';
+import NewPassword from '../Pages/NewPassword';
 
 import '../styles/styles.css';
 

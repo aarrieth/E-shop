@@ -1,20 +1,25 @@
 import React from 'react';
-import '../styles/NewPassword.scss';
 import '../styles/Layout.scss';
-import Form from './Form';
-import FormContainer from './FormContainer';
-import Layout from './Layout';
-import TextForm from './TextForm';
+import '../styles/Logo.scss';
+import Form from '../containers/Form';
+import FormContainer from '../containers/FormContainer';
+import Layout from '../containers/Layout';
+import TextForm from '../containers/TextForm';
 import Label from '../components/Label';
 import Input from '../components/Input';
 import Button from '../components/Button';
-import Logo from '../assets/logos/logo_yard_sale.svg';
+import urlLogo from '../assets/logos/logo_yard_sale.svg';
+import Logo from '../components/Logo';
 
 const NewPassword = () => {
 	return (
 		<Layout className="layout-size layout-display">
 			<FormContainer>
-				<img src={Logo} alt="logo" className="logo" />
+				<Logo
+					urlLogo={urlLogo}
+					alt="logo"
+					className="logo"
+				/>
 
 				<TextForm className="title">
 					Create a new password
