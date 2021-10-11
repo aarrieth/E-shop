@@ -1,0 +1,10 @@
+@import 'vars';
+.input {
+    background-color: $text-input-field;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: $md;
+    padding: 6px;
+    margin-bottom: 12px;
+}
