@@ -1,12 +1,13 @@
 import React from 'react';
-import NewPassword from '../Pages/NewPassword';
+import EmailConfirmed from '../Pages/EmailConfirmed';
+/* import NewPassword from '../Pages/NewPassword'; */
 
 import '../styles/styles.css';
 
 const App = () => {
 	return (
 		<>
-			<NewPassword />
+			<EmailConfirmed />
 		</>
 	);
 };

@@ -1,0 +1,13 @@
+@import 'vars';
+.resend {
+    font-size: $sm;
+}
+
+.resend span {
+    color: $very-light-pink;
+}
+
+.resend a {
+    color: $hospital-green;
+    text-decoration: none;
+}
