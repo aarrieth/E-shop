@@ -15,3 +15,15 @@
     margin-top: 14px;
     margin-bottom: 30px;
 }
+
+.secondary-button {
+    background-color: $white;
+    border-radius: 8px;
+    border: 1px solid $hospital-green;
+    color: $hospital-green;
+    width: 100%;
+    cursor: pointer;
+    font-size: $md;
+    font-weight: bold;
+    height: 50px;
+}

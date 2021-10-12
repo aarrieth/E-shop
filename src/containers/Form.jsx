@@ -1,10 +1,9 @@
 import React from 'react';
-import '../styles/Form.scss';
 
-const Form = ({ children }) => {
+const Form = ({ className, children }) => {
 	return (
 		<>
-			<form className="form">{children}</form>
+			<form className={className}>{children}</form>
 		</>
 	);
 };

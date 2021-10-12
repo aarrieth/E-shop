@@ -1,42 +1,64 @@
 import React from 'react';
-import '../styles/Login.scss';
+import '../styles/Layout.scss';
+import '../styles/Logo.scss';
+import '../styles/Form.scss';
+import '../styles/Label.scss';
+import '../styles/Input.scss';
+import '../styles/Button.scss';
+import Layout from '../containers/Layout';
+import Logo from '../components/Logo';
+import urlMainLogo from '../assets/logos/logo_yard_sale.svg';
+import Form from '../containers/Form';
+import Label from '../components/Label';
+import Input from '../components/Input';
+import Button from '../components/Button';
+import Link from '../components/Link';
 
 function Login(props) {
 	return (
-		<div className="login">
-			<div className="form-container">
-				<img
-					src="./logos/logo_yard_sale.svg"
-					alt="logo"
+		<Layout className="layout-size layout-display">
+			<Layout className="layout-form--container">
+				<Logo
+					urlLogo={urlMainLogo}
+					alt="main logo"
 					className="logo"
 				/>
-				<form action="/" className="form">
-					<label className="label">Email address</label>
-					<input
+				<Form className="form">
+					<Label forInputControl="email" className="label">
+						Email address
+					</Label>
+					<Input
 						type="text"
 						id="email"
-						placeholder="platzi@example.cm"
+						placeholder="usuario@mail.com"
 						className="input input-email"
 					/>
-					<label className="label">Password</label>
-					<input
+					<Label
+						forInputControl="password"
+						className="label"
+					>
+						Email address
+					</Label>
+					<Input
 						type="password"
 						id="password"
 						placeholder="*********"
 						className="input input-password"
 					/>
-					<input
+					<Button
 						type="submit"
-						value="Log in"
-						className="primary-button login-button"
+						value="Log In"
+						className="primary-button primary-button--succes"
 					/>
-					<a href="/">Forgot my password</a>
-				</form>
-				<button className="secondary-button signup-button">
-					Sign up
-				</button>
-			</div>
-		</div>
+					<Link href="/">Forgot my password</Link>
+				</Form>
+				<Button
+					type="submit"
+					value="Log In"
+					className="secondary-button"
+				/>
+			</Layout>
+		</Layout>
 	);
 }
 
