@@ -15,7 +15,7 @@ import Button from '../components/Button';
 import urlLogo from '../assets/logos/logo_yard_sale.svg';
 import Logo from '../components/Logo';
 
-const NewPassword = () => {
+const RecoveryPassword = () => {
 	return (
 		<Layout className="layout-size layout-display">
 			<Layout className="layout-form--container">
@@ -43,7 +43,7 @@ const NewPassword = () => {
 						type="password"
 						id="password"
 						placeholder="*********"
-						className="input input-password"
+						className="input"
 					/>
 
 					<Label
@@ -56,7 +56,7 @@ const NewPassword = () => {
 						type="password"
 						id="new-password"
 						placeholder="*********"
-						className="input input-password"
+						className="input"
 					/>
 
 					<Button
@@ -70,4 +70,4 @@ const NewPassword = () => {
 	);
 };
 
-export default NewPassword;
+export default RecoveryPassword;
