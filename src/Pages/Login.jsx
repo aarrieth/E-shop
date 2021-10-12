@@ -31,7 +31,7 @@ function Login(props) {
 						type="text"
 						id="email"
 						placeholder="usuario@mail.com"
-						className="input input-email"
+						className="input"
 					/>
 					<Label
 						forInputControl="password"
@@ -43,7 +43,7 @@ function Login(props) {
 						type="password"
 						id="password"
 						placeholder="*********"
-						className="input input-password"
+						className="input"
 					/>
 					<Button
 						type="submit"

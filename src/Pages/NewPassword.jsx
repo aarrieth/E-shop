@@ -1,6 +1,11 @@
 import React from 'react';
 import '../styles/Layout.scss';
 import '../styles/Logo.scss';
+import '../styles/Form.scss';
+import '../styles/TextForm.scss';
+import '../styles/Label.scss';
+import '../styles/Input.scss';
+import '../styles/Button.scss';
 import Form from '../containers/Form';
 import Layout from '../containers/Layout';
 import TextForm from '../containers/TextForm';
@@ -26,7 +31,7 @@ const NewPassword = () => {
 				<TextForm className="subtitle">
 					Enter a new password for you account
 				</TextForm>
-				<Form>
+				<Form className="form">
 					<Label
 						forInputControl="password"
 						className="label"

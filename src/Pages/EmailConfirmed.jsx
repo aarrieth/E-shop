@@ -2,11 +2,13 @@ import React from 'react';
 import '../styles/Layout.scss';
 import '../styles/Logo.scss';
 import '../styles/EmailConfirmed.scss';
+import '../styles/TextForm.scss';
+import '../styles/Button.scss';
 import Layout from '../containers/Layout';
 import urlLogo from '../assets/logos/logo_yard_sale.svg';
+import logoEmail from '../assets/icons/email.svg';
 import Logo from '../components/Logo';
 import TextForm from '../containers/TextForm';
-import logoEmail from '../assets/icons/email.svg';
 import Button from '../components/Button';
 
 const EmailConfirmed = () => {

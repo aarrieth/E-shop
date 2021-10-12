@@ -2,12 +2,11 @@
 .form {
     display: flex;
     flex-direction: column;
-}
-
-.form a {
-    color: $hospital-green;
-    font-size: $sm;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 52px;
+    & a {
+        color: $hospital-green;
+        font-size: $sm;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 52px;
+    }
 }

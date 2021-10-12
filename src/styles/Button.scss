@@ -1,29 +1,39 @@
 @import 'vars';
-.primary-button {
-    background-color: $hospital-green;
-    border-radius: 8px;
-    border: none;
-    color: $white;
-    width: 100%;
-    cursor: pointer;
-    font-size: $md;
-    font-weight: bold;
-    height: 50px;
+
+/*
+* mixin bgc-value is to pass the value of background-color property
+*/
+
+@mixin bgc-value ($bgc-value) {
+    background-color: $bgc-value;
 }
 
-.primary-button--succes {
-    margin-top: 14px;
-    margin-bottom: 30px;
+@mixin font-style($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+.primary-button {
+    @include bgc-value($hospital-green);
+    @include font-style($white, $md, bold);
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    &--succes {
+        margin-top: 14px;
+        margin-bottom: 30px;
+    }
 }
 
 .secondary-button {
-    background-color: $white;
+    @include bgc-value($white);
+    @include font-style($hospital-green, $md, bold);
     border-radius: 8px;
     border: 1px solid $hospital-green;
-    color: $hospital-green;
     width: 100%;
     cursor: pointer;
-    font-size: $md;
-    font-weight: bold;
     height: 50px;
 }
