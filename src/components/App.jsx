@@ -17,7 +17,7 @@ import '../styles/styles.css';
 const App = () => {
 	return (
 		<Router>
-			<Layout>
+			<Layout className="outder-wrapper">
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route exact path="/login" component={Login} />

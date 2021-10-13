@@ -1,0 +1,90 @@
+@import 'vars';
+@mixin logo-size($svalue) {
+    width: $svalue;
+}
+
+.header {
+    &-site {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid $very-light-pink;
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 70px;
+    }
+    &-navigation-left {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+}
+
+.custom-icon-menu,
+.menu {
+    display: none;
+}
+
+.navbar-logo,
+.navbar-logo-custom {
+    @include logo-size(100px);
+}
+
+.header-navigation-left ul,
+.header-navigation-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.header-navigation-left {
+    display: flex;
+}
+
+.header-navigation-left ul {
+    margin-left: 12px;
+}
+
+.header-navigation-left ul li a,
+.header-navigation-right ul li a {
+    text-decoration: none;
+    color: $very-light-pink;
+    border: 1px solid $white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.header-navigation-left ul li a:hover,
+.header-navigation-right ul li a:hover {
+    border: 1px solid $hospital-green;
+    color: $hospital-green;
+}
+
+.email-user {
+    color: $very-light-pink;
+    font-size: $sm;
+    margin-right: 12px;
+}
+
+.shopping-car {
+    position: relative;
+}
+
+.shopping-car div {
+    width: 16px;
+    height: 16px;
+    background-color: $hospital-green;
+    border-radius: 50%;
+    font-size: $sm;
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
