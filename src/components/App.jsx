@@ -11,6 +11,7 @@ import Layout from '../containers/Layout';
 import Home from '../Pages/Home';
 import NotFound from '../Pages/NotFound';
 import CreateAccount from '../Pages/CreateAccount';
+import EditAccount from '../Pages/EditAccount';
 
 //stylesheets!
 import '../styles/styles.css';
@@ -31,6 +32,11 @@ const App = () => {
 						exact
 						path="/create-account"
 						component={CreateAccount}
+					/>
+					<Route
+						exact
+						path="/edit-account"
+						component={EditAccount}
 					/>
 					<Route exact path="*" component={NotFound} />
 				</Switch>
