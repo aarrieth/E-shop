@@ -12,6 +12,7 @@ import Home from '../Pages/Home';
 import NotFound from '../Pages/NotFound';
 import CreateAccount from '../Pages/CreateAccount';
 import EditAccount from '../Pages/EditAccount';
+import MobileMenu from '../containers/MobileMenu';
 
 //stylesheets!
 import '../styles/styles.css';
@@ -37,6 +38,11 @@ const App = () => {
 						exact
 						path="/edit-account"
 						component={EditAccount}
+					/>
+					<Route
+						exact
+						path="/mobile-menu"
+						component={MobileMenu}
 					/>
 					<Route exact path="*" component={NotFound} />
 				</Switch>

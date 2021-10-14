@@ -5,7 +5,6 @@ import Layout from '../containers/Layout';
 import TextForm from '../containers/TextForm';
 import Form from '../containers/Form';
 import Label from '../components/Label';
-import Input from '../components/Input';
 import Button from '../components/Button';
 
 //stylesheets
