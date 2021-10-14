@@ -3,7 +3,7 @@ import '../styles/TextForm.scss';
 const TextForm = ({ children, className = undefined }) => {
 	return (
 		<>
-			{className === 'tittle' ? (
+			{className === 'title' ? (
 				<h1 className={className}>{children}</h1>
 			) : (
 				<p className={className}>{children}</p>

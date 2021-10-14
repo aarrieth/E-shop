@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Input = ({ type, id, placeholder, className }) => {
+const Input = ({
+	type,
+	id,
+	placeholder = null,
+	className,
+}) => {
 	return (
 		<input
 			type={type}

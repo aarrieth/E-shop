@@ -10,6 +10,7 @@ import Login from '../Pages/Login';
 import Layout from '../containers/Layout';
 import Home from '../Pages/Home';
 import NotFound from '../Pages/NotFound';
+import CreateAccount from '../Pages/CreateAccount';
 
 //stylesheets!
 import '../styles/styles.css';
@@ -25,6 +26,11 @@ const App = () => {
 						exact
 						path="/recovery-password"
 						component={RecoveryPassword}
+					/>
+					<Route
+						exact
+						path="/create-account"
+						component={CreateAccount}
 					/>
 					<Route exact path="*" component={NotFound} />
 				</Switch>
