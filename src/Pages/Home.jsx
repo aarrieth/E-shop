@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../containers/Header';
-import ListDetails from '../containers/ListDetails';
+import Header from '@containers/Header';
+import ListDetails from '@containers/ListDetails';
 
 const Home = () => {
 	return (

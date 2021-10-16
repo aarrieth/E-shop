@@ -1,4 +1,4 @@
-export const navbarOption = [
+const navbarOption = [
 	'All',
 	'Clothes',
 	'Electronics',
@@ -6,3 +6,5 @@ export const navbarOption = [
 	'Toys',
 	'Others',
 ];
+
+export default navbarOption;

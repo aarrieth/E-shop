@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Layout from './Layout';
-import TextForm from '../containers/TextForm';
+import TextForm from '@containers/TextForm';
 import AddToCar from './AddToCar';
 
-import '../styles/ProductInfo.scss';
+import '@styles/ProductInfo.scss';
 
 const ProductInfo = ({ price, name, urlIcon }) => {
 	return (

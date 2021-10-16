@@ -1,21 +1,21 @@
 import React from 'react';
 
 //components and conatiners
-import Layout from '../containers/Layout';
-import Logo from '../components/Logo';
+import Layout from '@containers/Layout';
+import Logo from '@components/Logo';
 import Navbar from './Navbar';
-import UnorderedList from '../components/UnorderedList';
-import ListItem from '../components/ListItem';
+import UnorderedList from '@components/UnorderedList';
+import ListItem from '@components/ListItem';
 
 //icons and images
 
-import shopingCarIcon from '../assets/icons/icon_shopping_cart.svg';
-import urlIconMenuResponsive from '../assets/icons/icon_menu.svg';
-import urlMainLogo from '../assets/logos/logo_yard_sale.svg';
+import shopingCarIcon from '@icons/icon_shopping_cart.svg';
+import urlIconMenuResponsive from '@icons/icon_menu.svg';
+import urlMainLogo from '@logos/logo_yard_sale.svg';
 
 //styles
-import '../styles/Header.scss';
-import '../styles/Logo.scss';
+import '@styles/Header.scss';
+import '@styles/Logo.scss';
 
 const Header = () => {
 	return (

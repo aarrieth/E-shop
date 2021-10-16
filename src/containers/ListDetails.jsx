@@ -5,9 +5,9 @@ import Layout from './Layout';
 import ProductCard from './ProductCard';
 
 //stylesheets
-import '../styles/Layout.scss';
-import '../styles/ListDetails.scss';
-import urlIcon from '../assets/icons/bt_add_to_cart.svg';
+import '@styles/Layout.scss';
+import '@styles/ListDetails.scss';
+import urlIcon from '@icons/bt_add_to_cart.svg';
 
 const productDetails = [
 	{

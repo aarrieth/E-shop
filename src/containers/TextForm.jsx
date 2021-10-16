@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/TextForm.scss';
+import '@styles/TextForm.scss';
 const TextForm = ({ children, className = undefined }) => {
 	return (
 		<>

@@ -5,14 +5,14 @@ import {
 	Route,
 } from 'react-router-dom';
 
-import RecoveryPassword from '../Pages/RecoveryPassword';
-import Login from '../Pages/Login';
-import Layout from '../containers/Layout';
-import Home from '../Pages/Home';
-import NotFound from '../Pages/NotFound';
-import CreateAccount from '../Pages/CreateAccount';
-import EditAccount from '../Pages/EditAccount';
-import MobileMenu from '../containers/MobileMenu';
+import RecoveryPassword from '@pages/RecoveryPassword';
+import Login from '@pages/Login';
+import Layout from '@containers/Layout';
+import Home from '@pages/Home';
+import NotFound from '@pages/NotFound';
+import CreateAccount from '@pages/CreateAccount';
+import EditAccount from '@pages/EditAccount';
+import MobileMenu from '@containers/MobileMenu';
 
 //stylesheets!
 import '../styles/styles.css';

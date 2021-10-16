@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Layout from './Layout';
-import Logo from '../components/Logo';
+import Logo from '@components/Logo';
 import ProductInfo from './ProductInfo';
 
 //stylesheet
-import '../styles/ProductCard.scss';
+import '@styles/ProductCard.scss';
 
 const ProductCard = ({
 	urlImage,
