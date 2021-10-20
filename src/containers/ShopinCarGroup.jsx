@@ -7,7 +7,7 @@ import Paragraph from '../components/Paragraph';
 //stylesheet
 import '@styles/ShopinCarGroup.scss';
 
-const ShopinCarGroup = () => {
+const ShopinCarGroup = ({ children = undefined }) => {
 	return (
 		<Layout className="shopping-cart">
 			<Figure
@@ -16,6 +16,7 @@ const ShopinCarGroup = () => {
 			/>
 			<Paragraph>Bike</Paragraph>
 			<Paragraph>$30.00</Paragraph>
+			{children}
 		</Layout>
 	);
 };
