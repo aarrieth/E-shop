@@ -23,6 +23,7 @@ const App = () => {
 							exact
 							path={path}
 							component={component}
+							key={component}
 						/>
 					))}
 				</Switch>

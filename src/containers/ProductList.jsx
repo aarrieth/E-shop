@@ -60,7 +60,7 @@ const productDetails = [
 	},
 ];
 
-const ListDetails = () => {
+const ProductList = () => {
 	return (
 		<Layout className="wrapper-list--details">
 			<Layout className="cards-container">
@@ -78,4 +78,4 @@ const ListDetails = () => {
 	);
 };
 
-export default ListDetails;
+export default ProductList;

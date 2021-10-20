@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-//components and conatiners
+//components and containers
 import Layout from '@containers/Layout';
 import Logo from '@components/Logo';
 import Navbar from './Navbar';
 import UnorderedList from '@components/UnorderedList';
 import ListItem from '@components/ListItem';
+import Menu from './Menu';
 
 //icons and images
 
-import shopingCarIcon from '@icons/icon_shopping_cart.svg';
+import shoppingCard from '@icons/icon_shopping_cart.svg';
 import urlIconMenuResponsive from '@icons/icon_menu.svg';
 import urlMainLogo from '@logos/logo_yard_sale.svg';
 
@@ -18,6 +19,7 @@ import '@styles/Header.scss';
 import '@styles/Logo.scss';
 
 const Header = () => {
+	const [showToggle, setShowToggle] = useState(false);
 	return (
 		<header className="header-site">
 			<Layout className="header-inner">
@@ -40,17 +42,21 @@ const Header = () => {
 				</Layout>
 				<Layout className="header-navigation-right">
 					<UnorderedList>
-						<ListItem className="email-user">
+						<ListItem
+							onClick={() => setShowToggle(!showToggle)}
+							className="email-user"
+						>
 							usuario@mail.com
 						</ListItem>
 						<ListItem className="shopping-car">
 							<Logo
-								urlLogo={shopingCarIcon}
+								urlLogo={shoppingCard}
 								alt="shoping car icon"
 							/>
 							<Layout>2</Layout>
 						</ListItem>
 					</UnorderedList>
+					{showToggle && <Menu />}
 				</Layout>
 			</Layout>
 		</header>
