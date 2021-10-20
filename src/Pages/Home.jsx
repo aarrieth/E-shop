@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '@containers/Header';
-import OrderItem from '@containers/OrderItem';
-
+import ProductDetail from '../containers/ProductDetail';
+/* import Orders from '../containers/Orders';
+ */
 const Home = () => {
 	return (
 		<>
 			<Header />
-			<OrderItem />
+			<ProductDetail />
 		</>
 	);
 };
