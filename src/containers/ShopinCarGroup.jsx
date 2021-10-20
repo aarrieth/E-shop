@@ -5,9 +5,9 @@ import Layout from './Layout';
 import Paragraph from '../components/Paragraph';
 
 //stylesheet
-import '@styles/ShoppingCrdGorup.scss';
+import '@styles/ShopinCarGroup.scss';
 
-const ShoppingCarGroup = () => {
+const ShopinCarGroup = () => {
 	return (
 		<Layout className="shopping-cart">
 			<Figure
@@ -20,4 +20,4 @@ const ShoppingCarGroup = () => {
 	);
 };
 
-export default ShoppingCarGroup;
+export default ShopinCarGroup;
