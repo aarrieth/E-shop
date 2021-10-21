@@ -7,20 +7,11 @@ import ProductInfo from './ProductInfo';
 //stylesheet
 import '@styles/ProductCard.scss';
 
-const ProductCard = ({
-	urlImage,
-	price,
-	name,
-	urlIcon,
-}) => {
+const ProductCard = ({ urlImage, price, name }) => {
 	return (
 		<Layout className="product-card">
 			<Logo urlLogo={urlImage} />
-			<ProductInfo
-				price={price}
-				name={name}
-				urlIcon={urlIcon}
-			/>
+			<ProductInfo price={price} name={name} />
 		</Layout>
 	);
 };

@@ -6,14 +6,16 @@ import AddToCar from './AddToCar';
 
 import '@styles/ProductInfo.scss';
 
-const ProductInfo = ({ price, name, urlIcon }) => {
+import addToCar from '@icons/bt_add_to_cart.svg';
+
+const ProductInfo = ({ price, name }) => {
 	return (
 		<Layout className="product-info">
 			<Layout>
 				<TextForm>{price}</TextForm>
 				<TextForm>{name}</TextForm>
 			</Layout>
-			<AddToCar urlIcon={urlIcon} />
+			<AddToCar urlIcon={addToCar} />
 		</Layout>
 	);
 };
