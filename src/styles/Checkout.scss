@@ -1,10 +1,16 @@
 @import 'vars';
 .product-detail {
     width: 360px;
+    height: auto;
     padding: 24px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    background-color: white;
+    top: 100px;
+    bottom: 0px;
+    border-radius: 6px;
+    border: 1px solid $very-light-pink;
 }
 
 .title-container {

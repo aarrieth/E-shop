@@ -13,22 +13,28 @@ import routes from './Routes';
 //stylesheets!
 import '@styles/styles.css';
 
+import AppContext from './context/AppContest';
+import useInitialState from './hooks/useInitialState';
+
 const App = () => {
+	const initialState = useInitialState();
 	return (
-		<Router>
-			<Layout className="outder-wrapper">
-				<Switch>
-					{routes.map(({ path, component }) => (
-						<Route
-							exact
-							path={path}
-							component={component}
-							key={component}
-						/>
-					))}
-				</Switch>
-			</Layout>
-		</Router>
+		<AppContext.Provider value={initialState}>
+			<Router>
+				<Layout className="outder-wrapper">
+					<Switch>
+						{routes.map(({ path, component }) => (
+							<Route
+								exact
+								path={path}
+								component={component}
+								key={component}
+							/>
+						))}
+					</Switch>
+				</Layout>
+			</Router>
+		</AppContext.Provider>
 	);
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 //components and containers
 import Layout from '@containers/Layout';
@@ -7,6 +7,8 @@ import Navbar from './Navbar';
 import UnorderedList from '@components/UnorderedList';
 import ListItem from '@components/ListItem';
 import Menu from './Menu';
+import Checkout from './Checkout';
+import AppContext from '../context/AppContest';
 
 //icons and images
 
@@ -19,7 +21,11 @@ import '@styles/Header.scss';
 import '@styles/Logo.scss';
 
 const Header = () => {
-	const [showToggle, setShowToggle] = useState(false);
+	const { state } = useContext(AppContext);
+
+	const [showToggle, setShowToggle] = useState(false); //show toggle menu
+	const [toggleOrders, setToggleOrders] = useState(false); // show checkout list
+
 	return (
 		<header className="header-site">
 			<Layout className="header-inner">
@@ -48,15 +54,21 @@ const Header = () => {
 						>
 							usuario@mail.com
 						</ListItem>
-						<ListItem className="shopping-car">
+						<li
+							className="shopping-car"
+							onClick={() => setToggleOrders(!toggleOrders)}
+						>
 							<Logo
 								urlLogo={shoppingCard}
 								alt="shoping car icon"
 							/>
-							<Layout>2</Layout>
-						</ListItem>
+							{state.cart.length > 0 ? (
+								<Layout>{state.cart.length}</Layout>
+							) : null}
+						</li>
 					</UnorderedList>
 					{showToggle && <Menu />}
+					{toggleOrders && <Checkout />}
 				</Layout>
 			</Layout>
 		</header>

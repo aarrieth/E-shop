@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 
 //components and containers
 import Layout from './Layout';
-import ProductCard from './ProductCard';
+import ProductItem from './ProductItem';
 
 //stylesheets
 import '@styles/Layout.scss';
@@ -24,12 +24,7 @@ const ProductList = () => {
 		<Layout className="wrapper-list--details">
 			<Layout className="cards-container">
 				{products?.map((product) => (
-					<ProductCard
-						key={product.id}
-						price={product.price}
-						name={product.title}
-						urlImage={product.images[0]}
-					/>
+					<ProductItem product={product} key={product.id} />
 				))}
 			</Layout>
 		</Layout>

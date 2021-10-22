@@ -2,7 +2,7 @@ import React from 'react';
 
 //containers
 import Layout from '@containers/Layout';
-import Tittle from '@components/Tittle';
+import Title from '../components/Title';
 import Paragraph from '@components/Paragraph';
 import ShopinCarGroup from './ShopinCarGroup';
 import Span from '@components/Span';
@@ -14,7 +14,7 @@ const Orders = () => {
 	return (
 		<Layout className="my-order">
 			<Layout className="my-order-container">
-				<Tittle className="title">My orders</Tittle>
+				<Title className="title">My orders</Title>
 				<Layout className="my-order-content">
 					<Layout className="order">
 						<Paragraph>

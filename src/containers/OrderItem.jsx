@@ -27,22 +27,6 @@ const OrderItem = () => {
 						<Paragraph>$560.00</Paragraph>
 						<Logo urlLogo={arrowRight} alt="arrow right" />
 					</Layout>
-					<Layout className="order">
-						<Paragraph>
-							<Span>03.25.21</Span>
-							<Span>6 articles</Span>
-						</Paragraph>
-						<Paragraph>$560.00</Paragraph>
-						<Logo urlLogo={arrowRight} alt="arrow right" />
-					</Layout>
-					<Layout className="order">
-						<Paragraph>
-							<Span>03.25.21</Span>
-							<Span>6 articles</Span>
-						</Paragraph>
-						<Paragraph>$560.00</Paragraph>
-						<Logo urlLogo={arrowRight} alt="arrow right" />
-					</Layout>
 				</Layout>
 			</Layout>
 		</Layout>
