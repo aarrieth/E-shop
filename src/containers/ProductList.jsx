@@ -9,20 +9,21 @@ import ProductCard from './ProductCard';
 import '@styles/Layout.scss';
 import '@styles/ListDetails.scss';
 
-const ProductList = () => {
-	const [productList, setProductList] = useState([]);
+import useGetProducts from '../hooks/useGetProducts';
 
-	useEffect(async () => {
-		const response = await axios.get(
-			'https://api.escuelajs.co/api/v1/products?limit=10&offset=0'
-		);
-		setProductList(response.data);
-	}, []);
+const API_URL =
+	'https://api.escuelajs.co/api/v1/products?limit=10&offset=0';
+
+const ProductList = () => {
+	const { products, load, error } = useGetProducts(API_URL);
+
+	if (load) <h1>Loading....!</h1>;
+	if (error) <h1>Producto no encontrado</h1>;
 
 	return (
 		<Layout className="wrapper-list--details">
 			<Layout className="cards-container">
-				{productList?.map((product) => (
+				{products?.map((product) => (
 					<ProductCard
 						key={product.id}
 						price={product.price}

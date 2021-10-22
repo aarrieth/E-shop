@@ -3,13 +3,15 @@ import React from 'react';
 const Input = ({
 	type,
 	id,
-	placeholder = null,
+	name = undefined,
+	placeholder = undefined,
 	className,
 }) => {
 	return (
 		<input
 			type={type}
 			id={id}
+			name={name}
 			placeholder={placeholder}
 			className={className}
 		/>

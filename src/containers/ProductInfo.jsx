@@ -12,7 +12,7 @@ const ProductInfo = ({ price, name }) => {
 	return (
 		<Layout className="product-info">
 			<Layout>
-				<TextForm>{price}</TextForm>
+				<TextForm>${price}</TextForm>
 				<TextForm>{name}</TextForm>
 			</Layout>
 			<AddToCar urlIcon={addToCar} />
