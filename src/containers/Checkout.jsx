@@ -62,7 +62,6 @@ const Checkout = () => {
 					</Paragraph>
 					<Paragraph>${sumTotal()}</Paragraph>
 				</Layout>
-
 				<Button className="primary-button">Checkout</Button>
 			</Layout>
 		</aside>
