@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 
 import Layout from '@containers/Layout';
-import Logo from '@components/Logo';
 import Title from '@components/Title';
 import ShoppingCarGroup from './ShopinCarGroup';
 import Button from '../components/Button';
@@ -11,11 +10,12 @@ import AppContext from '../context/AppContest';
 
 import arrowLeft from '@icons/flechita.svg';
 import close from '@icons/icon_close.png';
-
+import Logo from '../components/Logo';
 import '@styles/Checkout.scss';
 
 const Checkout = () => {
-	const { state } = useContext(AppContext);
+	const { state, removeFromToCart } =
+		useContext(AppContext);
 
 	/*
 	 * Para calcular el valor total a pagar de todos los productos agregados al carrito de compras.
@@ -27,6 +27,16 @@ const Checkout = () => {
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;
 	};
+
+	/**
+	 *
+	 * @param {*} product item to remove from shopping cart on local state
+	 *
+	 */
+	const handleRemoveProduct = (product) => {
+		removeFromToCart(product);
+	};
+
 	return (
 		<aside className="product-detail">
 			<Layout className="title-container">
@@ -39,7 +49,11 @@ const Checkout = () => {
 						key={`product-${product.id}`}
 						product={product}
 					>
-						<Logo urlLogo={close} alt="close" />
+						<img
+							src={close}
+							alt="close"
+							onClick={() => handleRemoveProduct(product)}
+						/>
 					</ShoppingCarGroup>
 				))}
 				<Layout className="order">
