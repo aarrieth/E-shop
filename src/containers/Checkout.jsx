@@ -13,8 +13,20 @@ import arrowLeft from '@icons/flechita.svg';
 import close from '@icons/icon_close.png';
 
 import '@styles/Checkout.scss';
+
 const Checkout = () => {
 	const { state } = useContext(AppContext);
+
+	/*
+	 * Para calcular el valor total a pagar de todos los productos agregados al carrito de compras.
+	 * Se realiza el cálculo desde el estado local.
+	 */
+	const sumTotal = () => {
+		const reducer = (accumulator, currentValue) =>
+			accumulator + currentValue.price;
+		const sum = state.cart.reduce(reducer, 0);
+		return sum;
+	};
 	return (
 		<aside className="product-detail">
 			<Layout className="title-container">
@@ -24,7 +36,7 @@ const Checkout = () => {
 			<Layout className="my-order-content">
 				{state.cart.map((product) => (
 					<ShoppingCarGroup
-						key={`Product-${product.key}`}
+						key={`product-${product.id}`}
 						product={product}
 					>
 						<Logo urlLogo={close} alt="close" />
@@ -34,7 +46,7 @@ const Checkout = () => {
 					<Paragraph>
 						<Span>Total</Span>
 					</Paragraph>
-					<Paragraph>$560.00</Paragraph>
+					<Paragraph>${sumTotal()}</Paragraph>
 				</Layout>
 
 				<Button className="primary-button">Checkout</Button>
