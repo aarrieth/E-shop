@@ -1,12 +1,15 @@
 @import 'vars';
 .desktop-menu {
+    background-color: $white;
     width: 100px;
     height: auto;
     border: 1px solid $very-light-pink;
     border-radius: 0px 0px 6px 6px;
     padding: 20px 20px 0 20px;
     position: absolute;
+    right: 50px;
     top: 100px;
+    z-index: 5;
 }
 
 .desktop-menu ul {
@@ -37,6 +40,6 @@
 .desktop-menu ul li a {
     color: $black;
     text-decoration: none;
-    /*   margin-bottom: 20px; */
+    margin-bottom: 20px;
     display: inline-block;
 }
