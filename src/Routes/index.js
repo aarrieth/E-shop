@@ -4,6 +4,7 @@ import Home from '@pages/Home';
 import NotFound from '@pages/NotFound';
 import CreateAccount from '@pages/CreateAccount';
 import EditAccount from '@pages/EditAccount';
+import ProductDescriptions from '../containers/ProductDescriptions';
 
 const routes = [
 	{
@@ -21,6 +22,10 @@ const routes = [
 	{
 		path: '/sign-up',
 		component: CreateAccount,
+	},
+	{
+		path: '/products/:id',
+		component: ProductDescriptions,
 	},
 	{
 		path: '/update',

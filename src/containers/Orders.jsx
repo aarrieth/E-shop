@@ -24,8 +24,6 @@ const Orders = () => {
 						<Paragraph>$560.00</Paragraph>
 					</Layout>
 					<ShopinCarGroup />
-					<ShopinCarGroup />
-					<ShopinCarGroup />
 				</Layout>
 			</Layout>
 		</Layout>

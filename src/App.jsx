@@ -15,6 +15,7 @@ import '@styles/styles.css';
 
 import AppContext from './context/AppContest';
 import useInitialState from './hooks/useInitialState';
+import ProductItem from './containers/ProductItem';
 
 const App = () => {
 	const initialState = useInitialState();

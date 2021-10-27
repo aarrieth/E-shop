@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '@containers/Layout';
 import Logo from '@components/Logo';
 import Paragraph from '@components/Paragraph';
-
+import Button from '../components/Button';
 //icons and logos
 import close from '../assets/icons/icon_close.png';
 import btnAddToCar from '@icons/bt_add_to_cart.svg';
