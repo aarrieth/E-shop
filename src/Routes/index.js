@@ -1,9 +1,9 @@
-import RecoveryPassword from '@pages/RecoveryPassword';
-import Login from '@pages/Login';
-import Home from '@pages/Home';
-import NotFound from '@pages/NotFound';
-import CreateAccount from '@pages/CreateAccount';
-import EditAccount from '@pages/EditAccount';
+import RecoveryPassword from '../pages/RecoveryPassword';
+import Login from '../pages/Login';
+import Home from '../pages/Home';
+import NotFound from '../pages/NotFound';
+import CreateAccount from '../pages/CreateAccount';
+import EditAccount from '../pages/EditAccount';
 import ProductDescriptions from '../containers/ProductDescriptions';
 
 const routes = [

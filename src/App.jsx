@@ -5,8 +5,7 @@ import {
 	Route,
 } from 'react-router-dom';
 
-import Layout from '@containers/Layout';
-
+import Layout from './containers/Layout';
 //utilities
 import routes from './Routes';
 
