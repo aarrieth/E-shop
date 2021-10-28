@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Layout from '@containers/Layout';
-import UnorderedList from '@components/UnorderedList';
+import Layout from './Layout';
+import UnorderedList from '../components/UnorderedList';
 import HiperLink from '../components/HiperLink';
 
 //stylesheet
-import '@styles/Menu.scss';
+import '../styles/Menu.scss';
 
 const Menu = ({ defaultToggled = false }) => {
 	return (

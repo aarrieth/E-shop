@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
 
-import Layout from '@containers/Layout';
-import Title from '@components/Title';
+import Layout from '../containers/Layout';
+import Title from '../components/Title';
 import ShoppingCarGroup from './ShopinCarGroup';
 import Button from '../components/Button';
-import Paragraph from '@components/Paragraph';
-import Span from '@components/Span';
+import Paragraph from '../components/Paragraph';
+import Span from '../components/Span';
 import AppContext from '../context/AppContest';
 
-import arrowLeft from '@icons/flechita.svg';
-import close from '@icons/icon_close.png';
+import arrowLeft from '../assets/icons/flechita.svg';
+import close from '../assets/icons/icon_close.png';
 import Logo from '../components/Logo';
-import '@styles/Checkout.scss';
+import '../styles/Checkout.scss';
 
 const Checkout = () => {
 	const { state, removeFromToCart } =

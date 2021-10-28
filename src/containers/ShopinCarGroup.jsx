@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Figure from '@components/Figure';
+import Figure from '../components/Figure';
 import Layout from './Layout';
 import Paragraph from '../components/Paragraph';
 
 //stylesheet
-import '@styles/ShopinCarGroup.scss';
+import '../styles/ShopinCarGroup.scss';
 
 const ShopinCarGroup = ({
 	product,

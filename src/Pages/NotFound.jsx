@@ -1,9 +1,9 @@
 import React from 'react';
-import HiperLink from '@components/HiperLink';
-import Layout from '@containers/Layout';
-import Title from '@components/Title';
+import HiperLink from '../components/HiperLink';
+import Layout from '../containers/Layout';
+import Title from '../components/Title';
 
-import '@styles/NotFound.scss';
+import '../styles/NotFound.scss';
 
 const NotFound = () => {
 	return (

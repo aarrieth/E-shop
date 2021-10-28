@@ -1,13 +1,12 @@
 import React from 'react';
-import axios from 'axios';
 
 //components and containers
 import Layout from './Layout';
 import ProductItem from './ProductItem';
 
 //stylesheets
-import '@styles/Layout.scss';
-import '@styles/ListDetails.scss';
+import '../styles/Layout.scss';
+import '../styles/ListDetails.scss';
 
 import useGetProducts from '../hooks/useGetProducts';
 

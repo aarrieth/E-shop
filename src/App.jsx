@@ -10,7 +10,7 @@ import Layout from './containers/Layout';
 import routes from './Routes';
 
 //stylesheets!
-import '@styles/styles.css';
+import './styles/styles.css';
 
 import AppContext from './context/AppContest';
 import useInitialState from './hooks/useInitialState';

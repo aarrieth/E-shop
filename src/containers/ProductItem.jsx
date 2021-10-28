@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import addToCartImage from '../assets/icons/bt_add_to_cart.svg';
 
 //stylesheet
-import '@styles/ProductItem.scss';
+import '../styles/ProductItem.scss';
 
 const ProductItem = ({ product }) => {
 	const { addToCart } = useContext(AppContext);
