@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssStractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 	mode: 'development',
@@ -31,8 +32,14 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.s[ac]ss$/i,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					devMode
+						? 'style-loader'
+						: MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader',
+				],
 			},
 			{
 				test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
@@ -40,7 +47,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[name].[ext]',
+							name: '[path][name].[ext]',
 							outputPath: 'fonts/',
 						},
 					},
@@ -52,9 +59,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './public/index.html',
 			filename: './index.html',
-		}),
-		new MiniCssStractPlugin({
-			filename: '[name].css',
 		}),
 	],
 	devServer: {
