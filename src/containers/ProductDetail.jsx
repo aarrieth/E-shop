@@ -1,16 +1,16 @@
 import React from 'react';
 
 //containers and components
-import Layout from '@containers/Layout';
-import Logo from '@components/Logo';
-import Paragraph from '@components/Paragraph';
+import Layout from './Layout';
+import Logo from '../components/Logo';
+import Paragraph from '../components/Paragraph';
 
 //icons and logos
 import close from '../assets/icons/icon_close.png';
-import btnAddToCar from '@icons/bt_add_to_cart.svg';
+import btnAddToCar from '../assets/icons/bt_add_to_cart.svg';
 
 //stylesheet
-import '@styles/ProductDetails.scss';
+import '../styles/ProductDetails.scss';
 
 const ProductDetail = () => {
 	return (

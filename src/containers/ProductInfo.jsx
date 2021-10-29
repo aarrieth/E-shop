@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Layout from './Layout';
-import TextForm from '@containers/TextForm';
+import TextForm from './TextForm';
 import AddToCar from './AddToCar';
 
-import '@styles/ProductInfo.scss';
+import '../styles/ProductInfo.scss';
 
-import addToCar from '@icons/bt_add_to_cart.svg';
+import addToCar from '../assets/icons/bt_add_to_cart.svg';
 
 const ProductInfo = ({ price, name }) => {
 	return (

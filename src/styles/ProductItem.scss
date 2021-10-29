@@ -1,12 +1,19 @@
 @import 'vars';
 .product-card {
-    width: 240px;
+    width: 244px;
+    height: 340px;
+}
+
+.product-card:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    border: 1px solid $hospital-green;
+    border-radius: 4px 4px 0px 0px;
 }
 
 .product-card img {
-    width: 240px;
-    height: 240px;
-    border-radius: 20px;
+    width: 244px;
+    height: 244px;
     object-fit: cover;
 }
 
@@ -14,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 12px;
+    padding: 15px;
 }
 
 .product-info figure {

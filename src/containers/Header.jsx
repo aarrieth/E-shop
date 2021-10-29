@@ -1,24 +1,24 @@
 import React, { useState, useContext } from 'react';
 
 //components and containers
-import Layout from '@containers/Layout';
-import Logo from '@components/Logo';
+import Layout from '../containers/Layout';
+import Logo from '../components/Logo';
 import Navbar from './Navbar';
-import UnorderedList from '@components/UnorderedList';
-import ListItem from '@components/ListItem';
+import UnorderedList from '../components/UnorderedList';
+import ListItem from '../components/ListItem';
 import Menu from './Menu';
 import Checkout from './Checkout';
 import AppContext from '../context/AppContest';
 
 //icons and images
 
-import shoppingCard from '@icons/icon_shopping_cart.svg';
-import urlIconMenuResponsive from '@icons/icon_menu.svg';
-import urlMainLogo from '@logos/logo_yard_sale.svg';
+import shoppingCard from '../assets/icons/icon_shopping_cart.svg';
+import urlIconMenuResponsive from '../assets/icons/icon_menu.svg';
+import urlMainLogo from '../assets/logos/logo_yard_sale.svg';
 
 //styles
-import '@styles/Header.scss';
-import '@styles/Logo.scss';
+import '../styles/Header.scss';
+import '../styles/Logo.scss';
 
 const Header = () => {
 	const { state } = useContext(AppContext);

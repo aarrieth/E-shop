@@ -2,17 +2,16 @@ import React from 'react';
 
 //components and container
 import Layout from './Layout';
-import UnorderedList from '@components/UnorderedList';
-import HiperLink from '@components/HiperLink';
-import ListItem from '@components/ListItem';
-import Link from '@components/Link';
+import UnorderedList from '../components/UnorderedList';
+import HiperLink from '../components/HiperLink';
+import ListItem from '../components/ListItem';
+import Link from '../components/Link';
 
 //stylesheets
-import '@styles/Layout.scss';
-import '@styles/MobileMenu.scss';
-
+import '../styles/Layout.scss';
+import '../styles/MobileMenu.scss';
 //helpers
-import navbarOption from '@helpers/navbarOptions';
+import navbarOption from '../helpers/navbarOptions';
 
 const MobileMenu = () => {
 	return (

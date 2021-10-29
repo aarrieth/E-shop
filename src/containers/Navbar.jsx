@@ -1,7 +1,7 @@
 import React from 'react';
-import navbarOption from '@helpers/navbarOptions';
-import UnorderedList from '@components/UnorderedList';
-import HiperLink from '@components/HiperLink';
+import navbarOption from '../helpers/navbarOptions';
+import UnorderedList from '../components/UnorderedList';
+import HiperLink from '../components/HiperLink';
 
 const Navbar = ({ className = null }) => {
 	return (

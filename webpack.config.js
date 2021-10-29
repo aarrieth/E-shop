@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssStractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 	mode: 'development',
@@ -12,27 +13,6 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.js', '.jsx'],
-		alias: {
-			'@components': path.resolve(
-				__dirname,
-				'src/components/'
-			),
-			'@containers': path.resolve(
-				__dirname,
-				'src/containers/'
-			),
-			'@pages': path.resolve(__dirname, 'src/pages/'),
-			'@styles': path.resolve(__dirname, 'src/styles/'),
-			'@icons': path.resolve(
-				__dirname,
-				'src/assets/icons/'
-			),
-			'@logos': path.resolve(
-				__dirname,
-				'src/assets/logos/'
-			),
-			'@helpers': path.resolve(__dirname, 'src/helpers/'),
-		},
 	},
 	module: {
 		rules: [
@@ -52,8 +32,14 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(css|scss)$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					devMode
+						? 'style-loader'
+						: MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader',
+				],
 			},
 			{
 				test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
@@ -61,7 +47,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[name].[ext]',
+							name: '[path][name].[ext]',
 							outputPath: 'fonts/',
 						},
 					},
@@ -73,9 +59,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './public/index.html',
 			filename: './index.html',
-		}),
-		new MiniCssStractPlugin({
-			filename: '[name].css',
 		}),
 	],
 	devServer: {

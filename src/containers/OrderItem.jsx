@@ -1,17 +1,17 @@
 import React from 'react';
 
 //components and containers
-import Layout from '@containers/Layout';
-import Tittle from '@components/Tittle';
-import Paragraph from '@components/Paragraph';
-import Span from '@components/Span';
-import Logo from '@components/Logo';
+import Layout from '../containers/Layout';
+import Tittle from '../components/Title';
+import Paragraph from '../components/Paragraph';
+import Span from '../components/Span';
+import Logo from '../components/Logo';
 
 //icons and logos
-import arrowRight from '@icons/flechita.svg';
+import arrowRight from '../assets/icons/flechita.svg';
 
 //stylesheeta
-import '@styles/OrderItem.scss';
+import '../styles/OrderItem.scss';
 
 const OrderItem = () => {
 	return (
